@@ -1,4 +1,4 @@
-/*delcaro una constante con los productos informatico*/
+/*declaro una constante con los productos informatico*/
 
 const productosInformaticos = [
     {
