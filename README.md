@@ -1,0 +1,6 @@
+# Trabajo-practico-integrador
+Argentina programa 4.0 tramo 1 desarrolador web 
+
+Codigo generado en colaboracion con Jose franciso Ruski, Jesica Damiani y Ruben Sapena para el trabajo practico integrador
+del tramo 1 de Argentina Programa 4.0 en la instancia de desarrollador web inicial en la que se creo un sitio de ecomerce
+destinado a la venta de insumos teconologicos
