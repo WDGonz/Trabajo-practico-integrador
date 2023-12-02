@@ -1,0 +1,254 @@
+/* Estilos de la cabecera*/
+
+nav {
+    background-color:#0396a7; 
+}
+
+nav a {
+    text-decoration: none;
+    background-color:none;
+    color:none;
+    padding: 10px 15px;
+    display:inline-flex ;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 16px; 
+    text-transform: uppercase; 
+    justify-content: right;
+    align-items: flex-start;
+}
+
+nav ul {
+    background-color:#0396a7;
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display:inline-flex; 
+    color:#ffffff; /*coloco color a las letras*/
+    justify-content:left; /* Distribuye el espacio entre los elementos de la lista */
+    align-items:flex-start; /* Centra verticalmente los elementos de la lista */
+}
+
+header {
+    background-color:#024059;
+    padding: 20px;
+    border-color: none;
+    margin: 0;
+}
+
+.header-container {
+    display:inline-flex;
+    align-items:flex-start;
+    align-content: flex-start;
+    background-color:#024059;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.container {
+    background-color:#0396a7;
+    display:inline-flex;
+    justify-content:space-between;
+    width: 50%;
+    max-width: 50px;
+    margin: 0 auto;
+    color:#0396a7;  
+}
+   
+.container-fluid{
+    background-color: #024059;
+    padding: auto;
+    text-decoration-color:#ffffff;
+    color:#ffffff;
+}
+
+.navbar-brand{
+    background-color: #024059;
+    color: #024059;
+}
+
+.logo img {
+    justify-content: left;
+    max-width: 100%;
+    height: auto;
+    background-color:#024059;
+    color:#024059;
+}
+
+/*Estilos en la seccion main productos*/
+.centro h1 {
+    color:#03d9d9;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 40px;  
+}
+
+h2 {
+    color:#3c3c3b;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+p {
+    color:#3c3c3b;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+ /* centro todo lo que esta la seccion main productos*/
+ .centro {
+    width: 80%;
+    margin: 10%;
+    margin-top: 80px;
+}
+
+
+
+/*coloco estilo a la seccion productos*/
+
+.productos {
+    padding: 10px;
+    display:flex;
+    text-align: center;
+    justify-content: space-evenly; 
+    flex-wrap:wrap;
+    width: 90%;   
+}
+
+.producto {
+	display:inline-flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    width: 30%;
+    height: 400px; /*encuadra la sombra de cada producto*/
+    box-shadow: 5px 5px 5px 5px #0505052d;
+    padding: 10px;
+    border-radius: 3%;
+    margin: 15px 15px;
+    /* flex-wrap:nowrap; */
+}
+
+.producto :hover{
+    border: 2px solid  #193452;
+}
+
+.producto img {
+	display: block;
+    width: 80%;
+    height:110px;
+}
+
+/* .producto img {
+    display: block; 
+    width: 30%;
+    height:30px;
+} */
+
+.centro h1 {
+    color:#0396a7;
+}
+
+.texto p {
+    margin-top: 50px; 
+    text-align: left;
+}
+
+.btn{
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 3%;
+    cursor: pointer;
+    color: #9f2930;
+    font-size: 15px;
+    border: none;
+}
+
+.btn:hover{
+   border: 2px solid  #193452;
+}
+
+
+
+/* Estilos en la seccion footer*/
+footer {
+    background-color:#0396a7; /* Fondo azul */
+    color:#ffffff;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px 0;  /*Agrega un relleno de 20px arriba y abajo, sin relleno a la izquierda y a la derecha */
+}
+
+ /*menu de la empresa*/
+ .footer-links ul {
+    list-style: none;
+    color: #ffffff;
+    display: block;
+    text-align:left;
+    line-height: 1,5%; /*coloca un interlineado en el menu*/
+    margin-left:-60%; /*centra el menu al lado del logo*/
+    position: absolute;
+}
+
+/*datos sociales de la empresa*/
+.social-icons ul {
+    list-style: none;
+    text-align:left;
+    display: block;
+    line-height: 1,5%;
+    margin-left: 70%;
+    max-width: 60%;
+    margin-top: -20%;
+    position: absolute;
+}
+
+.centro {
+    width: 80%;
+    margin: 10%;
+}
+
+.partners ul {
+    display: block;
+    margin: auto;
+}
+
+/*alineo la opcion de redes sociales*/
+.iconos ul {
+    display:inline-flex; /*coloca en linea los inconos*/
+    list-style: none;
+    margin-left: 70%;
+    max-width: 60%;
+    margin-top: -10%;
+    position:absolute;
+}
+
+/*le coloco un tamaño al logo*/
+.logo-2 {
+    width: 20%;
+    margin: 10%;
+    
+}
+
+/*organizo los datos de la parte inferior*/
+.parte_inferior {
+    position: relative;
+    height: 40px;
+    background-color: #024059;
+    text-align: center;
+}
+
+.mi-seccion {
+    background-color:#1d1d1b;
+    text-align: center;
+    color:#ffffff;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 1px;
+}
+
+.letras{
+    color:#ffffff
+}
