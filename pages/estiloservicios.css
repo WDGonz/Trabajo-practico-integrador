@@ -148,6 +148,7 @@ footer {
     line-height: 1,5%; /*coloca un interlineado en el menu*/
     margin-left:-60%; /*centra el menu al lado del logo*/
     position: absolute;
+    margin-top: 4%;
 }
 
 /*datos sociales de la empresa*/

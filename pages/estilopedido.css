@@ -129,6 +129,7 @@ header {
     text-align:left;
     line-height: 1px; /*coloca un interlineado en el menu*/
     margin-left: 30%; 
+    border-radius: 10px;
 }
 
 .pedidos button {
@@ -167,6 +168,7 @@ footer {
     line-height: 1,5%; /*coloca un interlineado en el menu*/
     margin-left:-60%; /*centra el menu al lado del logo*/
     position: absolute;
+    margin-top: 4%;
 }
 
 /*datos sociales de la empresa*/
@@ -184,6 +186,7 @@ footer {
 .centro {
     width: 80%;
     margin: 10%;
+    border-radius: 10px;
 }
 
 .partners ul {
