@@ -211,3 +211,14 @@ footer {
 .letras{
     color:#ffffff
 }
+
+@media screen and (max-width: 768px) {
+    .navbar-navbar-expand-lg-bg-body-tertiary-navbar-navbar-dark-bg-dark, .main, .centro, .imagencentro, #frasehome, .row-justify-content-around, footer, .social-icons, .iconos, .footer-links ul{
+        grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+    }
+     .row-justify-content-around,  footer, .social-icons, .iconos, .footer-links ul{
+      background-size: auto;
+      padding: 60px 0;
+      grid-column: 2; 
+    }
+}
