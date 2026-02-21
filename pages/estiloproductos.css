@@ -254,13 +254,18 @@ footer {
     color:#ffffff
 }
 
-@media screen and (max-width: 768px) {
-    .navbar-navbar-expand-lg-bg-body-tertiary-navbar-navbar-dark-bg-dark, .main, .centro, .imagencentro, #frasehome, .row-justify-content-around, .productos, #contenedorproductos, footer, .social-icons, .iconos, .footer-links ul{
-        grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+.footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    /* Otros estilos comunes aquí */
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media screen and (max-width: 468px) {
+    .footer {
+      /* Ajusta los estilos específicos para dispositivos móviles */
+      font-size: 12px;
+      padding: 8px;
     }
-     .row-justify-content-around, .productos, #contenedorproductos,  footer, .social-icons, .iconos, .footer-links ul{
-      background-size: auto;
-      padding: 60px 0;
-      grid-column: 2; 
-    }
-}
+  }
