@@ -107,27 +107,94 @@ p {
     font-size: 18px;
 }
 
-.servicios {
-    display: flex;
-    flex-wrap: wrap;
-}
-  
-.item {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    padding: 10px;
-}
-  
-.item img {
-    margin-right: 20px;
-    max-width: 100%;
-    height: auto;
+.services-page {
+    background: linear-gradient(180deg, #f3f8fa 0%, #ffffff 45%);
+    padding: clamp(36px, 6vw, 72px) 16px;
 }
 
-.content {
+.services-page .centro {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+}
+
+.services-intro {
+    max-width: 760px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.services-intro .servh1 {
+    margin-bottom: 8px;
+    font-size: clamp(32px, 5vw, 44px);
+}
+
+.services-intro h2 {
+    margin-bottom: 16px;
+    color: #024059;
+    font-family: 'Exo 2', sans-serif;
+    font-size: clamp(20px, 3vw, 25px);
+    font-weight: 600;
+}
+
+.services-intro p {
+    margin: 0;
+    color: #50636d;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 24px;
+}
+
+.servicios .item {
     display: flex;
+    min-width: 0;
     flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+    border: 1px solid #dfe9ed;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 6px 20px #02405914;
+    transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.servicios .item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px #02405924;
+}
+
+.servicios .item > img {
+    display: block;
+    align-self: center;
+    width: 112px;
+    height: 112px;
+    margin: 0 0 20px;
+    object-fit: contain;
+}
+
+.servicios .content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.servicios .subtitulo {
+    margin: 0 0 12px;
+    color: #024059;
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+.servicios .item p {
+    flex: 1;
+    margin: 0;
+    color: #52656e;
+    font-size: 16px;
+    line-height: 1.65;
 }
 
 footer {
@@ -220,5 +287,24 @@ footer {
       background-size: auto;
       padding: 60px 0;
       grid-column: 2; 
+    }
+}
+
+@media (max-width: 600px) {
+    .services-page {
+        padding: 36px 16px;
+    }
+
+    .services-intro {
+        margin-bottom: 24px;
+        text-align: left;
+    }
+
+    .servicios {
+        gap: 16px;
+    }
+
+    .servicios .item {
+        padding: 20px;
     }
 }
