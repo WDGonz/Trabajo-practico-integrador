@@ -16,4 +16,4 @@ destinado a la venta de insumos teconologicos
 
 ### Tecnologias aplicadas
 
-[![My Skills](https://skillicons.dev/icons?i=figma,vscode,html,css,bootstrap,js,git,github,discord)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=figma,vscode,html,css,bootstrap,js,git,github)](https://skillicons.dev)
