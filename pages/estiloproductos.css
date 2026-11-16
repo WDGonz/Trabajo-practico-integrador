@@ -97,76 +97,101 @@ p {
     font-size: 18px;
 }
 
- /* centro todo lo que esta la seccion main productos*/
- .centro {
-    width: 80%;
-    margin: 10%;
-    margin-top: 80px;
+/* Main products section */
+.centro {
+    width: min(100% - 32px, 1100px);
+    margin: 80px auto;
 }
-
-
-
-/*coloco estilo a la seccion productos*/
-
-.productos {
-    padding: 10px;
-    display:flex;
-    text-align: center;
-    justify-content: space-evenly; 
-    flex-wrap:wrap;
-    width: 90%;   
-}
-
-.producto {
-	display:inline-flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    width: 30%;
-    height: 400px; /*encuadra la sombra de cada producto*/
-    box-shadow: 5px 5px 5px 5px #0505052d;
-    padding: 10px;
-    border-radius: 3%;
-    margin: 15px 15px;
-    /* flex-wrap:nowrap; */
-}
-
-.producto :hover{
-    border: 2px solid  #193452;
-}
-
-.producto img {
-	display: block;
-    width: 80%;
-    height:110px;
-}
-
-/* .producto img {
-    display: block; 
-    width: 30%;
-    height:30px;
-} */
 
 .centro h1 {
-    color:#0396a7;
+    color: #0396a7;
 }
 
 .texto p {
-    margin-top: 50px; 
+    margin-top: 32px;
     text-align: left;
 }
 
-.btn{
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 3%;
-    cursor: pointer;
-    color: #9f2930;
-    font-size: 15px;
-    border: none;
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: 24px;
+    width: 100%;
+    padding: 10px 0;
 }
 
-.btn:hover{
-   border: 2px solid  #193452;
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    min-height: 420px;
+    padding: 20px;
+    border: 1px solid #dce5e8;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px #0505051a;
+    text-align: center;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.producto:hover {
+    box-shadow: 0 8px 20px #0505052b;
+    transform: translateY(-3px);
+}
+
+.producto img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    margin: 0 auto 16px;
+    object-fit: contain;
+}
+
+.producto h3 {
+    margin: 0 0 12px;
+    color: #024059;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.producto .descripcion-producto {
+    flex-grow: 1;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.producto .precio-producto {
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.producto .precio-producto strong {
+    color: #024059;
+    white-space: nowrap;
+}
+
+.producto .btn-carrito {
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #0396a7;
+    color: #ffffff;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.producto .btn-carrito:hover {
+    background-color: #024059;
+    color: #ffffff;
+}
+
+.producto .btn-carrito:focus-visible {
+    outline: 3px solid #03d9d9;
+    outline-offset: 3px;
 }
 
 
@@ -203,11 +228,6 @@ footer {
     max-width: 60%;
     margin-top: -20%;
     position: absolute;
-}
-
-.centro {
-    width: 80%;
-    margin: 10%;
 }
 
 .partners ul {
@@ -254,13 +274,18 @@ footer {
     color:#ffffff
 }
 
-@media screen and (max-width: 768px) {
-    .navbar-navbar-expand-lg-bg-body-tertiary-navbar-navbar-dark-bg-dark, .main, .centro, .imagencentro, #frasehome, .row-justify-content-around, .productos, #contenedorproductos, footer, .social-icons, .iconos, .footer-links ul{
-        grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+.footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    /* Otros estilos comunes aquí */
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media screen and (max-width: 468px) {
+    .footer {
+      /* Ajusta los estilos específicos para dispositivos móviles */
+      font-size: 12px;
+      padding: 8px;
     }
-     .row-justify-content-around, .productos, #contenedorproductos,  footer, .social-icons, .iconos, .footer-links ul{
-      background-size: auto;
-      padding: 60px 0;
-      grid-column: 2; 
-    }
-}
+  }
