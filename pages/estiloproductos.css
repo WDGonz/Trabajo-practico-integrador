@@ -219,72 +219,6 @@ p {
 
 
 
-/* Estilos en la seccion footer*/
-footer {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 1fr) auto;
-    align-items: center;
-    gap: 24px;
-    background-color:#0396a7;
-    color:#ffffff;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    padding: 24px clamp(16px, 5vw, 64px);
-}
-
-footer .row {
-    width: 100%;
-    margin: 0;
-}
-
-footer .container {
-    display: grid;
-    grid-template-columns: minmax(70px, 0.7fr) minmax(120px, 1fr);
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    background: transparent;
-}
-
-footer .logo-2 {
-    width: min(100%, 110px);
-    margin: 0;
-}
-
-footer .footer-links ul,
-footer .social-icons ul,
-footer .iconos ul {
-    position: static;
-    list-style: none;
-    max-width: 100%;
-    margin: 0;
-    margin-top: 0;
-    margin-left: 0;
-    padding: 0;
-}
-
-footer .footer-links ul,
-footer .social-icons ul {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-footer .social-icons ul {
-    overflow-wrap: anywhere;
-}
-
-footer .iconos ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-}
-
 .partners ul {
     display: block;
     margin: auto;
@@ -296,20 +230,6 @@ footer .iconos ul {
     height: 40px;
     background-color: #024059;
     text-align: center;
-}
-
-.mi-seccion {
-    background-color:#1d1d1b;
-    text-align: center;
-    color:#ffffff;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    padding: 1px;
-}
-
-.letras{
-    color:#ffffff
 }
 
 @media screen and (max-width: 768px) {
@@ -325,59 +245,4 @@ footer .iconos ul {
         height: 160px;
     }
 
-    footer {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-        padding: 24px 16px;
-    }
-
-    footer .row {
-        margin: 0;
-    }
-
-    footer .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        width: 100%;
-        max-width: none;
-        padding: 0;
-        background: transparent;
-    }
-
-    footer .logo-2 {
-        width: min(45vw, 130px);
-        margin: 0;
-    }
-
-    footer .footer-links ul,
-    footer .social-icons ul,
-    footer .iconos ul {
-        position: static;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 16px;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    footer .social-icons ul {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    footer .footer-links ul,
-    footer .social-icons ul {
-        align-items: center;
-        text-align: center;
-    }
-
-    footer .iconos ul {
-        gap: 16px;
-    }
 }

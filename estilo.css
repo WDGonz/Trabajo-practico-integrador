@@ -128,86 +128,6 @@ header {
     font-size: 18px;
 }
 
-footer {
-    background-color:#0396a7;
-    color:#ffffff;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    padding: 28px clamp(16px, 5vw, 64px);
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: minmax(90px, 0.7fr) minmax(150px, 1fr) minmax(220px, 1.6fr) auto;
-    align-items: center;
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo-2 {
-    display: block;
-    width: min(100%, 130px);
-    margin: 0;
-}
-
-.logo-2 img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.footer-links ul,
-.social-icons ul,
-.iconos ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-links ul,
-.social-icons ul {
-    display: grid;
-    gap: 8px;
-}
-
-.footer-links a {
-    display: inline-block;
-    padding: 0;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer-links a:hover,
-.footer-links a:focus-visible {
-    text-decoration: underline;
-}
-
-.social-icons {
-    margin: 0;
-    font-style: normal;
-    overflow-wrap: anywhere;
-}
-
-.iconos ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-}
-
-.iconos a {
-    display: inline-flex;
-    padding: 4px;
-}
-
-.iconos img {
-    display: block;
-    width: 30px;
-    height: 30px;
-}
-
 .centro {
     width: 80%;
     margin: 10%;
@@ -232,46 +152,6 @@ footer {
     justify-content: space-around;
 }
 
-.mi-seccion {
-    background-color:#1d1d1b;
-    text-align: center;
-    color:#ffffff;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 400;
-    font-size: clamp(12px, 2.5vw, 14px);
-    line-height: 1.5;
-    padding: 8px 16px;
-}
-
-.mi-seccion p {
-    margin: 0;
-}
-
 .letras {
     color:#ffffff
-}
-
-@media screen and (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .footer-links ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        column-gap: 16px;
-        row-gap: 8px;
-    }
-
-    .social-icons ul {
-        justify-items: center;
-    }
-
-    .iconos ul {
-        gap: 16px;
-    }
 }
