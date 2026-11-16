@@ -26,31 +26,49 @@
       </nav>
    </header>
 
-   <main>
-     <div class="centro">
-        <h1>Ingresá tu pedido</h1>
-        <h2>ESTAMOS PARA AYUDARTE!</h2>
-        
-        <p>A partir de este breve formulario podrás contactarte con nosotros. Primero cargá tus datos. Luego elegí la opción de productos o servicios, según lo que necesites. En el caso de productos, podrás seleccionar productos y cantidades y hacer la compra.
-        Si optás por servicios, te pedimos que además de seleccionar el servicio de tu interés, nos dejes un mensaje contándonos brevemente el problema a solucionar y a la brevedad nos contactaremos para darte la solución.
-        Gracias por elegirnos!</p>
-        <br>
-      </div>
-      <div class="pedidos">   
-         <form id="pedidoforms"> 
-            <li>NOMBRE:    <input type="text" name ="nombre" placeholder="Nombre"> </li>
-            <li>APELLIDO:  <input type="text" name ="apellido" placeholder="Apellido"> </li>
-            <li>EMPRESA:   <input type="text" name ="empresa" placeholder="Empresa"> </li>
-            <li>E-MAIL:    <input type="text" name ="mail" placeholder="E-mail"> </li>
-            <li>TELEFONO:  <input type="text" name ="telefono" placeholder="Telefono"> </li>
-            <li>SELECCIONÁ LA OPCIÓN: <select name = "opciones" id="opciones">
-                                       <option value = "productos"> Productos </option>
-                                       <option value = "servicios"> Servicios </option>
-                                     </select> </li>
-            <button type="submit">Preciona aqui para tu pedido</button>
-        </form>
-      </div> 
-      
+   <main class="contact-page">
+      <section class="contact-intro">
+         <h1>Ingresá tu pedido</h1>
+         <h2>Estamos para ayudarte</h2>
+         <p>A través de este formulario podés contactarte con nosotros. Completá tus datos y elegí si tu consulta es sobre productos o servicios. Si necesitás un servicio, contanos brevemente qué problema querés resolver.</p>
+      </section>
+
+      <section class="pedido-card" aria-labelledby="pedido-titulo">
+         <h2 id="pedido-titulo">Completá tus datos</h2>
+         <p class="pedido-card__intro">Nos comunicaremos con vos a la brevedad.</p>
+         <form id="pedidoforms">
+            <div class="pedido-form__grid">
+               <div class="pedido-form__field">
+                  <label for="nombre">Nombre</label>
+                  <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="given-name">
+               </div>
+               <div class="pedido-form__field">
+                  <label for="apellido">Apellido</label>
+                  <input id="apellido" type="text" name="apellido" placeholder="Tu apellido" autocomplete="family-name">
+               </div>
+               <div class="pedido-form__field">
+                  <label for="empresa">Empresa</label>
+                  <input id="empresa" type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization">
+               </div>
+               <div class="pedido-form__field">
+                  <label for="mail">Correo electrónico</label>
+                  <input id="mail" type="text" name="mail" placeholder="nombre@empresa.com" autocomplete="email">
+               </div>
+               <div class="pedido-form__field">
+                  <label for="telefono">Teléfono</label>
+                  <input id="telefono" type="text" name="telefono" placeholder="Tu teléfono" autocomplete="tel">
+               </div>
+               <div class="pedido-form__field">
+                  <label for="opciones">¿Qué necesitás?</label>
+                  <select name="opciones" id="opciones">
+                     <option value="productos">Productos</option>
+                     <option value="servicios">Servicios</option>
+                  </select>
+               </div>
+               <button class="pedido-submit" type="submit">Enviar pedido</button>
+            </div>
+         </form>
+      </section>
    </main>
 
    <footer class="site-footer">
