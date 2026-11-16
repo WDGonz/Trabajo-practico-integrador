@@ -172,9 +172,74 @@ footer {
     color:#0396a7;
 }
 .bloque-central {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    gap: 24px;
+    padding: 24px 0 0;
+}
+
+.miembro {
     display: flex;
-    justify-content: space-between;
-    padding: 100px;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 20px;
+    border: 1px solid #dfe9ed;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 6px 20px #02405914;
+    text-align: center;
+    transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.miembro:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px #02405924;
+}
+
+.miembro__foto {
+    display: block;
+    width: clamp(120px, 14vw, 160px);
+    aspect-ratio: 1;
+    margin-bottom: 20px;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #0396a7;
+    object-fit: cover;
+}
+
+.miembro h3 {
+    min-height: 2.4em;
+    margin: 0 0 8px;
+    color: #024059;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.miembro p {
+    flex: 1;
+    margin: 0 0 18px;
+    color: #52656e;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.miembro__linkedin {
+    display: block;
+    width: 34px;
+    height: 34px;
+}
+
+@media (max-width: 480px) {
+    .bloque-central {
+        gap: 16px;
+    }
+
+    .miembro {
+        padding: 22px 18px;
+    }
 }
 
 
