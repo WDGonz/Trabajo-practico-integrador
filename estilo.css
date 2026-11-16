@@ -129,44 +129,83 @@ header {
 }
 
 footer {
-    background-color:#0396a7; /* Fondo azul */
+    background-color:#0396a7;
     color:#ffffff;
-    text-decoration: white;
     font-family: 'Exo 2', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    padding: 28px clamp(16px, 5vw, 64px);
 }
 
-/*le coloco un tamaño al logo*/
+.footer-content {
+    display: grid;
+    grid-template-columns: minmax(90px, 0.7fr) minmax(150px, 1fr) minmax(220px, 1.6fr) auto;
+    align-items: center;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .logo-2 {
-    width: 20%;
-    margin: 10%;
-    position: relative;
-}
-
- /*menu de la empresa*/
-.footer-links ul {
-    list-style: none;
     display: block;
-    text-align:left;
-    line-height: 1,5%; /*coloca un interlineado en el menu*/
-    margin-left:-60%; /*centra el menu al lado del logo*/
-    position: absolute;
-    text-decoration: #ffffff;
-    text-decoration-color: #ffffff;
-    margin-top: 4%;
+    width: min(100%, 130px);
+    margin: 0;
 }
 
-/*datos sociales de la empresa*/
+.logo-2 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.footer-links ul,
+.social-icons ul,
+.iconos ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links ul,
 .social-icons ul {
-    list-style: none;
-    text-align:left;
+    display: grid;
+    gap: 8px;
+}
+
+.footer-links a {
+    display: inline-block;
+    padding: 0;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin: 0;
+    font-style: normal;
+    overflow-wrap: anywhere;
+}
+
+.iconos ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.iconos a {
+    display: inline-flex;
+    padding: 4px;
+}
+
+.iconos img {
     display: block;
-    line-height: 1,5%;
-    margin-left: 70%;
-    max-width: 60%;
-    margin-top: -20%;
-    position: absolute;
+    width: 30px;
+    height: 30px;
 }
 
 .centro {
@@ -181,16 +220,6 @@ footer {
 .partners ul {
     display: block;
     margin: auto;
-}
-
-/*alineo la opcion de redes sociales*/
-.iconos ul {
-    display:inline-flex; /*coloca en linea los inconos*/
-    list-style: none;
-    margin-left: 70%;
-    max-width: 60%;
-    margin-top: -10%;
-    position:absolute;
 }
 
 /*organizo los datos de la parte inferior*/
@@ -209,8 +238,13 @@ footer {
     color:#ffffff;
     font-family: 'Exo 2', sans-serif;
     font-weight: 400;
-    font-size: 14px;
-    padding: 1px;
+    font-size: clamp(12px, 2.5vw, 14px);
+    line-height: 1.5;
+    padding: 8px 16px;
+}
+
+.mi-seccion p {
+    margin: 0;
 }
 
 .letras {
@@ -218,12 +252,26 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .navbar-navbar-expand-lg-bg-body-tertiary-navbar-navbar-dark-bg-dark, .main, .centro, .imagencentro, #frasehome, .row-justify-content-around, footer, .social-icons, .iconos, .footer-links ul{
-        grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+    .footer-content {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 20px;
     }
-     .row-justify-content-around,  footer, .social-icons, .iconos, .footer-links ul{
-      background-size: auto;
-      padding: 60px 0;
-      grid-column: 2; 
+
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 16px;
+        row-gap: 8px;
+    }
+
+    .social-icons ul {
+        justify-items: center;
+    }
+
+    .iconos ul {
+        gap: 16px;
     }
 }
