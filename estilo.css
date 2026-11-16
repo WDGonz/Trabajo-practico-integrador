@@ -101,7 +101,7 @@ header {
 .home-hero::after {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgb(2 64 89 / 72%), rgb(2 64 89 / 18%));
+    background: linear-gradient(90deg, rgb(2 64 89 / 30%), rgb(2 64 89 / 6%));
     content: "";
 }
 
