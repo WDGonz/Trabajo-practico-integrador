@@ -53,7 +53,11 @@ requisitos:
 ● JS
 
 
-### Actualizaciones recientes (14–16 de noviembre de 2026)
+
+
+
+
+## Actualizaciones recientes (14–16 de noviembre de 2026)
 
 - Se adaptaron el encabezado y el pie de página para que se reorganicen en pantallas móviles, tabletas y escritorio.
 - Se renovó la portada con una ilustración tecnológica, un nuevo mensaje principal y una grilla adaptable para los logos de partners.
