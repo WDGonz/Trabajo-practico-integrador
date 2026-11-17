@@ -6,6 +6,53 @@ del tramo 1 de Argentina Programa 4.0 en la instancia de desarrollador web inici
 destinado a la venta de insumos teconologicos
 
 
+ ## Objetivo
+
+Concretar un proyecto aplicando los conocimientos impartidos a lo largo del curso, con la
+finalidad de agregarlo a sus portfolios personales.
+
+## Enunciado
+
+Desarrollar una landing page para una organización/emprendimiento/empresa
+(rubro/actividad a elección del estudiante) que cumpla, mínimamente, con los siguientes
+requisitos:
+
+
+● El sitio debe contar con las siguientes Secciones:
+
+○ Presentación de la Organización
+○ Presentación Personal
+○ Formulario de Contacto
+○ Formulario de un Proceso (Ejemplos: Cotización o Reclamo)
+
+
+
+● El sitio debe contar con un Formulario de Proceso:
+
+○ A modo Asistente (Wizard)
+○ Validación de Campos
+○ Generación de Resumen (No Editable)
+○ Exportación a PDF
+
+
+● El sitio debe utilizar las siguientes Bibliotecas
+○ Uso de Bibliotecas JS
+■ JQuery
+■ Validate.JS
+
+
+● El sitio debe contar con una Integración
+○ Consumo de API Externa a través de AJAX
+○ Visualización de los Resultados Obtenidos
+
+
+## Tecnologías a utilizar
+
+● HTML
+● CSS
+● JS
+
+
 ### Actualizaciones recientes (14–16 de noviembre de 2026)
 
 - Se adaptaron el encabezado y el pie de página para que se reorganicen en pantallas móviles, tabletas y escritorio.
