@@ -91,6 +91,23 @@ header {
     height: clamp(280px, 40vw, 520px);
     object-fit: cover;
     object-position: center;
+    animation: hero-image-motion 8s ease-in-out infinite alternate;
+}
+
+@keyframes hero-image-motion {
+    from {
+        transform: scale(1.02) translateY(0);
+    }
+
+    to {
+        transform: scale(1.06) translateY(-8px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .imagencentro {
+        animation: none;
+    }
 }
 
 .home-hero__content {
