@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,27 +40,27 @@
             <div class="pedido-form__grid">
                <div class="pedido-form__field">
                   <label for="nombre">Nombre</label>
-                  <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="given-name">
+                  <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required>
                </div>
                <div class="pedido-form__field">
                   <label for="apellido">Apellido</label>
-                  <input id="apellido" type="text" name="apellido" placeholder="Tu apellido" autocomplete="family-name">
+                  <input id="apellido" type="text" name="apellido" placeholder="Tu apellido" autocomplete="family-name" required>
                </div>
                <div class="pedido-form__field">
                   <label for="empresa">Empresa</label>
-                  <input id="empresa" type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization">
+                  <input id="empresa" type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" required>
                </div>
                <div class="pedido-form__field">
                   <label for="mail">Correo electrónico</label>
-                  <input id="mail" type="text" name="mail" placeholder="nombre@empresa.com" autocomplete="email">
+                  <input id="mail" type="email" name="mail" placeholder="nombre@empresa.com" autocomplete="email" required>
                </div>
                <div class="pedido-form__field">
                   <label for="telefono">Teléfono</label>
-                  <input id="telefono" type="text" name="telefono" placeholder="Tu teléfono" autocomplete="tel">
+                  <input id="telefono" type="tel" name="telefono" placeholder="Tu teléfono" autocomplete="tel" required>
                </div>
                <div class="pedido-form__field">
                   <label for="opciones">¿Qué necesitás?</label>
-                  <select name="opciones" id="opciones">
+                  <select name="opcion" id="opciones" required>
                      <option value="productos">Productos</option>
                      <option value="servicios">Servicios</option>
                   </select>
@@ -70,6 +70,14 @@
          </form>
       </section>
    </main>
+
+   <dialog id="pedido-confirmacion" class="pedido-confirmacion" aria-labelledby="pedido-confirmacion-titulo" aria-describedby="pedido-confirmacion-mensaje">
+      <div class="pedido-confirmacion__contenido">
+         <h2 id="pedido-confirmacion-titulo">¡Consulta confirmada!</h2>
+         <p id="pedido-confirmacion-mensaje"></p>
+         <button class="pedido-confirmacion__cerrar" type="button">Entendido</button>
+      </div>
+   </dialog>
 
    <footer class="site-footer">
       <div class="site-footer__content">
@@ -107,7 +115,7 @@
       <p>TRABAJO FINAL INTEGRADOR · ARGENTINA PROGRAMA · <span>2023</span> · GONZALEZ - RUSKI - SAPENA - DAMIANI</p>
    </div>
   
-   <scripttype type="module" src ="../pages/pedidoforms.js"></script>
+   <script type="module" src="./pedidoforms.js"></script>
 
 </body>
 </html>

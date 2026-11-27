@@ -373,6 +373,61 @@ main.contact-page {
     outline-offset: 3px;
 }
 
+.pedido-confirmacion {
+    width: min(460px, calc(100% - 32px));
+    padding: 0;
+    border: 0;
+    border-radius: 16px;
+    color: #243a45;
+    box-shadow: 0 20px 60px rgb(2 64 89 / 25%);
+    font-family: 'Exo 2', sans-serif;
+}
+
+.pedido-confirmacion::backdrop {
+    background: rgb(2 35 49 / 58%);
+    backdrop-filter: blur(3px);
+}
+
+.pedido-confirmacion__contenido {
+    padding: 32px;
+    text-align: center;
+}
+
+.pedido-confirmacion__contenido h2 {
+    margin: 0 0 12px;
+    color: #024059;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.pedido-confirmacion__contenido p {
+    margin: 0 0 24px;
+    color: #50636d;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.pedido-confirmacion__cerrar {
+    min-width: 140px;
+    min-height: 44px;
+    padding: 9px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #024059;
+    color: #ffffff;
+    font: 600 16px 'Exo 2', sans-serif;
+    cursor: pointer;
+}
+
+.pedido-confirmacion__cerrar:hover {
+    background: #0396a7;
+}
+
+.pedido-confirmacion__cerrar:focus-visible {
+    outline: 3px solid #0396a7;
+    outline-offset: 3px;
+}
+
 @media (max-width: 600px) {
     main.contact-page {
         padding: 36px 16px;

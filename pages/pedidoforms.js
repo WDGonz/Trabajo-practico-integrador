@@ -1,32 +1,46 @@
-/*llamamos al formulario para argegarle un evento*/
+import { user } from "./user.class.js";
 
-import { User } from "../pages/user.class.js"   /*importamos la class para usarla*/
-
-const form = document.querySelector('#pedidoforms')
+const form = document.querySelector("#pedidoforms");
+const confirmationDialog = document.querySelector("#pedido-confirmacion");
+const confirmationMessage = document.querySelector("#pedido-confirmacion-mensaje");
+const closeButton = document.querySelector(".pedido-confirmacion__cerrar");
 const pedidoarray = [];
 
+if (
+    !(form instanceof HTMLFormElement) ||
+    !(confirmationDialog instanceof HTMLDialogElement) ||
+    !(confirmationMessage instanceof HTMLElement) ||
+    !(closeButton instanceof HTMLButtonElement)
+) {
+    throw new Error("No se encontraron los elementos necesarios del formulario de pedido.");
+}
 
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-form.addEventListener ('submit', (e) => {
-        e.preventDefault()
-        let formData = new formData(form)   /*capturamos los datos del formulario*/
-        let nombre = formData.get('nombre') 
-        let apellido = formData.get('apellido')
-        let empresa = formData.get('empresa')
-        let mail = formData.get('mail')
-        let telefono = formData.get('telefono')
-        let opcion = formData.get('opcion')
+    const formData = new FormData(form);
+    const nombre = formData.get("nombre").trim();
+    const apellido = formData.get("apellido").trim();
+    const empresa = formData.get("empresa").trim();
+    const mail = formData.get("mail").trim();
+    const telefono = formData.get("telefono").trim();
+    const opcion = formData.get("opcion");
+    const solicitud = new user(nombre, apellido, empresa, mail, telefono, opcion);
 
-     if ((nombre !== '') && (apellido !== '') && (empresa !=='') && (mail !=='') && (telefono !=='') && (opcion !== '')){
-        let user = new User(nombre, apellido, empresa, mail, telefono, opcion)
-        console.log(user);
-        pedidoarray.push(user) 
-        localStorage.setItem('users', JSON.stringify(pedidoarray)) /*convertimos el user en una cadena de string*/
-       /* window.location = "../pages/productos.html"  /*estoy pidiendo que me envie a la pagina de productos*/
+    try {
+        localStorage.setItem("users", JSON.stringify([...pedidoarray, solicitud]));
+    } catch (error) {
+        console.error("No se pudo guardar la solicitud.", error);
+        window.alert("No se pudo registrar la solicitud. Intentalo de nuevo.");
+        return;
+    }
 
-     }else {
-        alert('Debe ingresar todos los campos')
-     }
+    pedidoarray.push(solicitud);
+    confirmationMessage.textContent = `Tu solicitud sobre ${opcion} quedó registrada. Nos comunicaremos con vos a la brevedad.`;
+    form.reset();
+    confirmationDialog.showModal();
+});
 
-    })
-    
+closeButton.addEventListener("click", () => {
+    confirmationDialog.close();
+});
